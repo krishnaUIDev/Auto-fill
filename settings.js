@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (let pair of pairs) {
       const key = pair.querySelector('.key-input').value.trim();
-      const value = pair.querySelector('.value-input').value.trim();
+      const value = pair.querySelector('.value-textarea').value.trim();
 
       if (key && value) {
         data[key] = value;
@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', function () {
     keyInput.placeholder = 'Field name';
     keyInput.value = key;
 
-    const valueInput = document.createElement('input');
-    valueInput.type = 'text';
-    valueInput.className = 'value-input';
-    valueInput.placeholder = 'Value';
-    valueInput.value = value;
+    const valueTextarea = document.createElement('textarea');
+    valueTextarea.className = 'value-textarea';
+    valueTextarea.placeholder = 'Value (supports multiple lines)';
+    valueTextarea.value = value;
+    valueTextarea.rows = 3; // Show 3 lines by default
 
     const removeBtn = document.createElement('button');
     removeBtn.className = 'remove-btn';
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     pairDiv.appendChild(keyInput);
-    pairDiv.appendChild(valueInput);
+    pairDiv.appendChild(valueTextarea);
     pairDiv.appendChild(removeBtn);
     keyValueContainer.appendChild(pairDiv);
   }
