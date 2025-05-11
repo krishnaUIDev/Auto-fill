@@ -3,7 +3,7 @@
   "name": "Autofill Extension By Krishna",
   "version": "1.0",
   "description": "Autofill custom text using right-click context menu",
-  "permissions": ["contextMenus", "activeTab", "storage"],
+  "permissions": ["contextMenus", "activeTab", "storage", "tabs"],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -21,5 +21,11 @@
   ],
   "icons": {
     "48": "icons/icon48.png"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["settings.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }

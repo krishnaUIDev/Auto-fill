@@ -1,24 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Autofill Settings</title>
+    <title>Autofill Extension</title>
     <style>
       body {
-        width: 400px;
+        width: 300px;
         padding: 15px;
         font-family: Arial, sans-serif;
-      }
-      .editor-container {
-        margin-bottom: 15px;
-      }
-      textarea {
-        width: 100%;
-        height: 200px;
-        padding: 8px;
-        font-family: monospace;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
       }
       button {
         background-color: #4caf50;
@@ -28,6 +16,7 @@
         border-radius: 4px;
         cursor: pointer;
         width: 100%;
+        margin-bottom: 10px;
       }
       button:hover {
         background-color: #45a049;
@@ -46,33 +35,12 @@
         background-color: #f2dede;
         color: #a94442;
       }
-      .example {
-        margin-top: 10px;
-        padding: 10px;
-        background-color: #f8f9fa;
-        border-radius: 4px;
-        font-size: 12px;
-      }
     </style>
   </head>
   <body>
-    <h2>Autofill Settings</h2>
-    <div class="editor-container">
-      <textarea
-        id="jsonEditor"
-        placeholder="Enter your autofill data in JSON format"
-      ></textarea>
-    </div>
-    <button id="saveButton">Save Settings</button>
+    <h2>Autofill Extension</h2>
+    <button id="settingsButton">Open Settings</button>
     <div id="status" class="status"></div>
-    <div class="example">
-      <strong>Example format:</strong><br />
-      {<br />
-      &nbsp;&nbsp;"fullName": "krishnakanth kondoju",<br />
-      &nbsp;&nbsp;"phone": "1234567890",<br />
-      &nbsp;&nbsp;"email": "example@email.com"<br />
-      }
-    </div>
     <script src="popup.js"></script>
   </body>
 </html>

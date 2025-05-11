@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Autofill Settings</title>
+    <style>
+      body {
+        width: 600px;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+      .key-value-container {
+        margin-bottom: 20px;
+      }
+      .key-value-pair {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        flex: 1;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .remove-btn {
+        background-color: #f44336;
+      }
+      .remove-btn:hover {
+        background-color: #da190b;
+      }
+      .status {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        display: none;
+      }
+      .success {
+        background-color: #dff0d8;
+        color: #3c763d;
+      }
+      .error {
+        background-color: #f2dede;
+        color: #a94442;
+      }
+      .add-pair-btn {
+        margin-bottom: 20px;
+      }
+      .save-btn {
+        width: 100%;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Autofill Settings</h2>
+    <button class="add-pair-btn" id="addPairBtn">Add New Field</button>
+    <div id="keyValueContainer" class="key-value-container">
+      <!-- Key-value pairs will be added here dynamically -->
+    </div>
+    <button class="save-btn" id="saveButton">Save Settings</button>
+    <div id="status" class="status"></div>
+    <script src="settings.js"></script>
+  </body>
+</html>
